@@ -2,8 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
-
 module.exports = {
   entry: [
   './src/App.js'
@@ -14,7 +12,6 @@ module.exports = {
     // publicPath: path.resolve(__dirname, "aaa")
   },
   module: {
-   
     loaders: [
     { test: /\.js$/, 
       exclude: /node_modules/, 
@@ -25,10 +22,16 @@ module.exports = {
         }
     },
     { rules: 
-      [ { test: /\.css$/, 
-        use: [ 'style-loader', 'css-loader' ] }] }
+      [ { 
+        test: /\.css$/, 
+        use: [ 
+        'style-loader', 
+        'css-loader' 
+        ] 
+      } ] 
+    } 
     ]
   },
-  devServer: { historyApiFallback: false, },
+  devServer: { historyApiFallback: true, },
   plugins: [new HtmlWebpackPlugin({ title: 'Example', template: './index.html' }) ]
 };
