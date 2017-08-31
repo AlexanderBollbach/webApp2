@@ -1,36 +1,11 @@
 html, body {
-	background-color: white;
+	background-color: #0a0567;
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
+body { overflow: hidden; }
+* {box-sizing: border-box;}
 
-.active {
-	background-color: purple;
-	color: white;
-}
 
-.CanvasHolder {
-	background-color: purple;
-	display: flex;
-
-	height: 50vh;
-
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-
-.MainCanvas {
-	border: 1px solid white;
-	background-color: blue;
-	padding: 0;
-	margin: auto;
-	width: 80%;
-	height: 70%;
-}
-
-.ScratchPad {
-	background-color: yellow;
-}
