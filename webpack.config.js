@@ -4,20 +4,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-  './src/App.js'
+  './src/index.js'
   ],
   output: { 
     path: path.resolve(__dirname, "dist"),
     filename: 'bundle.js',
-    // publicPath: path.resolve(__dirname, "aaa")
   },
   module: {
     loaders: [
-    { test: /\.js$/, 
+    { 
+      test: /\.js$/, 
       exclude: /node_modules/, 
       loader: 'babel-loader' ,
       query: {
-          presets: ['react', 'es2015'],
+          presets: ['react', 'es2015', 'stage-2'],
           plugins: ['transform-class-properties'], 
         }
     },

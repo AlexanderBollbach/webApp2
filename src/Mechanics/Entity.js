@@ -1,20 +1,23 @@
-export default class Node {
+export default class Entity {
 	
-	constructor(id, size, audioContext) {
+	constructor(id) {
 
-		this.volume = 1
-		this.gain = 0.0;
-		this.id = id
-		this.frequency = 400
-		this.closest = 0
-		this.phase = 0
-		this.isSelected = false;
-		this.isDragging = false;
 		
-		this.x = Math.random()
-		this.y = Math.random()
-		this.size = size;
+		this.id = id
+		
+		this.isSelected = false
+		
+		this.isDragging = false
+		
+		this.position = {
+			x: 0.1,
+			y: 0.1,
+		}
+		
+		this.size;
+
 		this.isTouching = false;
+
 		this.direction = {
 			x: -0.008,
 			y: -0.008, 
@@ -42,29 +45,29 @@ export default class Node {
 	}
 
 	// takes values in [0-1] range
-	setFrequency(value) {
-		this.frequency = value * 10000
-	}
+	// setFrequency(value) {
+	// 	this.frequency = value * 10000
+	// }
 
-	setVolume(value) {
-		this.volume = value / 10.0
-	}
+	// setVolume(value) {
+	// 	this.volume = value / 10.0
+	// }
 
-	setSize(value) {
-		this.size = value
-	}
+	// setSize(value) {
+	// 	this.size = value
+	// }
 
-	// returns values in range [0-1]
+	
 
-	getFrequency() {
-		return this.frequency / 10000
-	}
+	// getFrequency() {
+	// 	return this.frequency / 10000
+	// }
 
-	getVolume() {
-		return this.volume * 10
-	}
+	// getVolume() {
+	// 	return this.volume * 10
+	// }
 
-	getSize() {
-		return this.size;
-	}
+	// getSize() {
+	// 	return this.size;
+	// }
 }
